@@ -5,14 +5,20 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: write   # ⭐ 关键：解决 128 权限问题
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo with submodules
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
@@ -23,11 +29,22 @@ jobs:
         with:
           hugo-version: 'latest'
 
-      - name: Build site
+      - name: Build
         run: hugo --minify
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
