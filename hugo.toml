@@ -1,0 +1,9 @@
+baseURL = "https://jiangtiezhu.github.io/"
+languageCode = "zh-cn"
+title = "铁柱的赛博后花园"
+theme = "stack"
+
+[pagination]
+pagerSize = 5
+relativeURLs = false
+canonifyURLs = true

@@ -1,0 +1,35 @@
+[[main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = 1
+
+[[main]]
+identifier = "medical"
+name = "🩺 医学"
+url = "/medical/"
+weight = 2
+
+[[main]]
+identifier = "tech"
+name = "💻 技术"
+url = "/tech/"
+weight = 3
+
+[[main]]
+identifier = "galgame"
+name = "🎮 Galgame"
+url = "/galgame/"
+weight = 4
+
+[[main]]
+identifier = "life"
+name = "🎸 生活"
+url = "/life/"
+weight = 5
+
+[[main]]
+identifier = "about"
+name = "👤 关于"
+url = "/about/"
+weight = 6
