@@ -9,3 +9,4 @@ relativeURLs = false
 canonifyURLs = true
 [params]
 mainSections = ["medical", "tech", "galgame", "life", "about"]
+enableRobotsTXT = true
