@@ -7,3 +7,5 @@ theme = "stack"
 pagerSize = 5
 relativeURLs = false
 canonifyURLs = true
+[params]
+mainSections = [ "medical", "tech", "galgame", "life", "about" ]
