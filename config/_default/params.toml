@@ -24,6 +24,7 @@ name = "Email"
 url = "mailto:geekjkk@gmail.com"
 
 [article]
+fullContent = true
 headingAnchor = false
 math = false
 toc = true
