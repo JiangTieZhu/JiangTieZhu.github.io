@@ -10,3 +10,7 @@ canonifyURLs = true
 [params]
 mainSections = ["medical", "tech", "galgame", "life", "about"]
 enableRobotsTXT = true
+[sitemap]
+changefreq = "weekly"
+priority = 0.8
+filename = "sitemap.xml"
