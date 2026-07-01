@@ -1,4 +1,4 @@
-mainSections = ["post"]
+mainSections = ["medical", "tech", "galgame", "life"]
 enableHomePosts = true
 rssFullContent = true
 SortBy = "default"
