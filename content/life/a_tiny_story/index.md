@@ -3,7 +3,7 @@ title: "几段单相思历程(上)"
 date: 2026-07-01
 draft: false
 
-image:cover.jpg
+image: cover.jpg
 categories:
   - 生活
 
